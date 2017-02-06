@@ -47,6 +47,7 @@
     }
     
     int total = 0;
+    int num = 0;
 %>
 
 <!DOCTYPE html>
@@ -164,7 +165,19 @@
             </div>
             <div class="row" >
                 <div class="col-lg-12">
-                    <form method="post" action="/SmartGreen/Pagar">
+                    <form method="post" action="${initParam['posturl']}">
+                        <input type="hidden" name="upload" value="1">
+                        <input type="hidden" name="return" value="${initParam['returnurl']}">
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="business" value="${initParam['business']}">
+                        <input type="hidden" name="currency_code" value="MXN">
+                        
+                        <%for (int i = 0; i < k.size(); i++) {%>
+                        <%num = i + 1;%>
+                        <input type="hidden" name="item_name_<%out.print(num);%>" value="<%= k.get(i).getNombre()%>">
+                        <input type="hidden" name="amount_<%out.print(num);%>" value="<%= k.get(i).getPrecio() %>">
+                        <input type="hidden" name="quantity_<%out.print(num);%>" value="<%= k.get(i).getCantidad()%>">
+                        <% } %>
                         <input value="Pagar" type="submit" class="btn btn-primary">
                     </form>
                 </div>
