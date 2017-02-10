@@ -36,6 +36,10 @@
         <servlet-name>EliminarProducto</servlet-name>
         <servlet-class>servlets.EliminarProducto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Success</servlet-name>
+        <servlet-class>servlets.Success</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Connection</servlet-name>
         <url-pattern>/Connection</url-pattern>
@@ -80,6 +84,10 @@
         <servlet-name>EliminarProducto</servlet-name>
         <url-pattern>/EliminarProducto</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Success</servlet-name>
+        <url-pattern>/Success</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
@@ -88,22 +96,18 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-    
     <context-param>
         <param-name>authtoken</param-name>
         <param-value>fL0Odz0UrLzT3eVrrJy55JP3aViCtFEtbraIviwx4vtRla49UwEaYZhS3VK</param-value>
     </context-param>
-    
     <context-param>
         <param-name>posturl</param-name>
         <param-value>https://www.sandbox.paypal.com/cgi-bin/webscr</param-value>
     </context-param>
-    
     <context-param>
         <param-name>business</param-name>
         <param-value>smartgreena-facilitator@gmail.com</param-value>
     </context-param>
-    
     <context-param>
         <param-name>returnurl</param-name>
         <param-value>http://localhost:8080/SmartGreen/success.jsp</param-value>

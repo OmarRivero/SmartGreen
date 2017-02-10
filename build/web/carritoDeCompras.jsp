@@ -10,6 +10,7 @@
 <%@page import="clases.Productos"%>
 <%@page import="clases.ProductosDAO"%>
 <%@page import="clases.Usuario"%>
+<%@page import="clases.Seguridad"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
@@ -18,6 +19,9 @@
     ArrayList<ProductoCarrito> k = new ArrayList<ProductoCarrito>();
     Usuario h = new Usuario();
     Integer boton = 0;
+    
+    Seguridad seg = new Seguridad();
+    
     if (request.getSession().getAttribute("us") == null) {
         response.sendRedirect("login.jsp");
     } else {
@@ -48,6 +52,9 @@
     
     int total = 0;
     int num = 0;
+    
+    HttpSession ssn = request.getSession();
+    String id = ssn.getId();
 %>
 
 <!DOCTYPE html>
@@ -167,16 +174,18 @@
                 <div class="col-lg-12">
                     <form method="post" action="${initParam['posturl']}">
                         <input type="hidden" name="upload" value="1">
-                        <input type="hidden" name="return" value="${initParam['returnurl']}">
+                        <input type="hidden" name="return" value="${initParam['returnurl']}?iu=<%=seg.encriptar(h.getIdUsuario())%>">
                         <input type="hidden" name="cmd" value="_cart">
                         <input type="hidden" name="business" value="${initParam['business']}">
                         <input type="hidden" name="currency_code" value="MXN">
+                        <input type="hidden" name="session_id" value="<%out.print(id);%>"> 
                         
                         <%for (int i = 0; i < k.size(); i++) {%>
                         <%num = i + 1;%>
                         <input type="hidden" name="item_name_<%out.print(num);%>" value="<%= k.get(i).getNombre()%>">
                         <input type="hidden" name="amount_<%out.print(num);%>" value="<%= k.get(i).getPrecio() %>">
                         <input type="hidden" name="quantity_<%out.print(num);%>" value="<%= k.get(i).getCantidad()%>">
+                        <input type='hidden' name='item_number' value='<%= k.get(i).getIdProducto()%>'>
                         <% } %>
                         <input value="Pagar" type="submit" class="btn btn-primary">
                     </form>

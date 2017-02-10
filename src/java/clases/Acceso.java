@@ -190,7 +190,7 @@ public class Acceso {
 		}
 	}
      
-     private Usuario crearDTO(ResultSet rs) throws SQLException {
+    private Usuario crearDTO(ResultSet rs) throws SQLException {
         Usuario p = new Usuario();
         p.setIdUsuario(rs.getString("idUsuario"));
         p.setNombre(rs.getString("nombre"));
@@ -207,6 +207,4 @@ public class Acceso {
             }
         return p;
     }
-    
-    
 }
