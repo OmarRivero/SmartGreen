@@ -25,6 +25,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/Trash.png" />
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">

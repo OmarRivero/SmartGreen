@@ -33,6 +33,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/Trash.png" />
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -128,6 +129,9 @@
                 <div class="intro-text">
                     <div class="intro-lead-in">Es un placer conocerte!</div>
                     <div class="intro-heading textoborde">Bienvenido a SmartGreen</div>
+                      <h2 class="section-subheading ">¿Imaginas tener un invernadero en casa?</h2>
+                        <h3 class="section-subheading">Ahora podemos hacerlo realidad gracias a SmartGreen.</h3>
+                        <br>
                     <a href="#services" class="page-scroll btn btn-xl">Cuentame más</a>
                 </div>
             </div>
@@ -138,10 +142,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Servicios</h2>
-                        <h3 class="section-subheading text-muted">A continuacion te presentamos los servicios que suministra nuestra empresa.</h3>
+                        <h1 class="section-heading">¿QUE ES SMARTGREEN?</h1>
+                        <center><img src="img/logos/logosmartgreen.jpg" class="img-responsive img-circle" alt="" width="500"></center>
+
+                        <h3 class="section-heading text-muted"> SmartGreen es un invernadero inteligente, con el puedes tener una planta en su casa de una manera óptima tal y como si estuviese en un invernadero sin invertir mucho tiempo en ella.</h3>
+                        <hr>
                     </div>
-                </div>
+                </div><br>
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -171,6 +178,50 @@
             </div>
         </section>
         
+        
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Contáctanos</h2>
+                        <h3 class="section-subheading text-muted">Envia tus dudas o sugerencias</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form action="contact_me.php" method="post" name="sentMessage" id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Tu nombre *" id="name" name="name" required data-validation-required-message="Por favor ingresa tu nombre">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Tu correo eléctronico *" id="email" name="email" required data-validation-required-message="Por favor ingresa tu correo">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Asunto *" id="asunto" name="asunto" required data-validation-required-message="Por favor ingresa tu asunto">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Tu mensaje **" id="message" name="message" required data-validation-required-message="Por favor ingresa un mensaje"></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <button type="submit" class="btn btn-xl">Enviar Mensaje</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="team" class="bg-light-gray">
             <div class="container">
                 <div class="row">
@@ -228,49 +279,6 @@
             </div>
         </section>
         
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Contáctanos</h2>
-                        <h3 class="section-subheading text-muted">Envia tus dudas o sugerencias</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form action="contact_me.php" method="post" name="sentMessage" id="contactForm" novalidate>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Tu nombre *" id="name" name="name" required data-validation-required-message="Por favor ingresa tu nombre">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Tu correo eléctronico *" id="email" name="email" required data-validation-required-message="Por favor ingresa tu correo">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Asunto *" id="asunto" name="asunto" required data-validation-required-message="Por favor ingresa tu asunto">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <textarea class="form-control" placeholder="Tu mensaje **" id="message" name="message" required data-validation-required-message="Por favor ingresa un mensaje"></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="col-lg-12 text-center">
-                                    <div id="success"></div>
-                                    <button type="submit" class="btn btn-xl">Enviar Mensaje</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
         
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.min.js"></script>
