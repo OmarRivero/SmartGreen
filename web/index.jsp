@@ -189,7 +189,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="contact_me.php" method="post" name="sentMessage" id="contactForm" novalidate>
+                        <form action="contact_me.js" method="post" name="sentMessage" id="contactForm" novalidate>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -201,7 +201,7 @@
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Asunto *" id="asunto" name="asunto" required data-validation-required-message="Por favor ingresa tu asunto">
+                                        <input type="text" class="form-control" placeholder="Asunto *" id="asunto" name="subject" required data-validation-required-message="Por favor ingresa tu asunto">
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>
@@ -269,8 +269,7 @@
                             <ul class="list-inline social-buttons">
                                 <li><a href="https://www.facebook.com/emerson.alvarado.3950"><i class="fa fa-facebook"></i></a>
                                 </li>
-                                <li><a href="https://github.com/dan2344"
-                                       +><i class="fa fa-github"></i></a>
+                                <li><a href="https://github.com/dan2344"><i class="fa fa-github"></i></a>
                                 </li>
                             </ul>
                         </div>

@@ -2,7 +2,7 @@
 // Check for empty fields
 if(empty($_POST['name'])      ||
    empty($_POST['email'])     ||
-   empty($_POST['asunto'])     ||
+   empty($_POST['subject'])     ||
    empty($_POST['message'])   ||
    !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
@@ -12,7 +12,7 @@ if(empty($_POST['name'])      ||
    
 $nombre = strip_tags(htmlspecialchars($_POST['name']));
 $correo = strip_tags(htmlspecialchars($_POST['email']));
-$asunto = strip_tags(htmlspecialchars($_POST['asunto']));
+$asunto = strip_tags(htmlspecialchars($_POST['subject']));
 $mensaje = strip_tags(htmlspecialchars($_POST['message']));
    
 $to = 'imanol.rivero7@gmail.com';
