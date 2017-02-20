@@ -19,13 +19,14 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+            
             $.ajax({
-                url: "././mail/contact_me.php",
-                type: "POST",
+                url: "././mail/contact.jsp",
+                type: "GET",
                 data: {
                     name: name,
-                    phone: phone,
                     email: email,
+                    subject: subject,
                     message: message
                 },
                 cache: false,
@@ -51,12 +52,12 @@ $(function() {
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
-                },
+                }
             });
         },
         filter: function() {
             return $(this).is(":visible");
-        },
+        }
     });
 
     $("a[data-toggle=\"tab\"]").click(function(e) {

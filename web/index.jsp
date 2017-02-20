@@ -189,7 +189,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="contact_me.js" method="post" name="sentMessage" id="contactForm" novalidate>
+                        <form action="contact.jsp" method="post" name="sentMessage" id="contactForm" novalidate>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -201,7 +201,7 @@
                                         <p class="help-block text-danger"></p>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Asunto *" id="asunto" name="subject" required data-validation-required-message="Por favor ingresa tu asunto">
+                                        <input type="text" class="form-control" placeholder="Asunto *" id="subject" name="subject" required data-validation-required-message="Por favor ingresa tu asunto">
                                         <p class="help-block text-danger"></p>
                                     </div>
                                 </div>

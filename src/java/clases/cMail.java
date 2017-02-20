@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package extras;
+package clases;
 
 import java.util.Properties;
 import javax.mail.Message;
@@ -13,27 +13,25 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 
-/**
- *
- * @author Ger
- */
 public class cMail {
+    
     public String _error = "";
-    String _para = "";
-    String _cuerpoMsj = "";
-    String _de = "loyolafundacion@gmail.com";
-    String _titulo = "";
+    public String _para = "";
+    public String _cuerpoMsj = "";
+    public String _de = "smartgreena@gmail.com";
+    public String _titulo = "";
     
     public cMail()
     {
         
     }
-    public boolean mandaMAil(String Para, String Titulo, String Msj)
+    
+    public boolean mandaMail(String para, String titulo, String msj)
     {
         boolean envio = false;
-        this._titulo = Titulo;
-        this._para  = Para;
-        this._cuerpoMsj = Msj;
+        this._titulo = titulo;
+        this._cuerpoMsj = msj;
+        this._para = para;
         
         try
         {
@@ -43,20 +41,22 @@ public class cMail {
             confMail.setProperty("mail.smtp.host", "smtp.gmail.com");
             confMail.setProperty("mail.smtp.starttls.enable", "true");
             confMail.setProperty("mail.smtp.port", "587");
-            confMail.setProperty("mail.smtp.user", "loyolafundacion@gmail.com");
+            confMail.setProperty("mail.smtp.user", "smartgreena@gmail.com");
             confMail.setProperty("mail.smtp.auth", "true");
+            
             // Sesion
             Session session = Session.getDefaultInstance(confMail);
-            // Creamos el MAil
+            
+            // Creamos el Mail
             MimeMessage correo = new MimeMessage(session);
             correo.setFrom(new InternetAddress(this._de));
             correo.addRecipient(Message.RecipientType.TO, new InternetAddress(this._para));
             correo.setSubject(this._titulo);
             correo.setText(this._cuerpoMsj);
 
-            // Enviamos MAil .
+            // Enviamos Mail .
             Transport t = session.getTransport("smtp");
-            t.connect("loyolafundacion@gmail.com", "WEBTECNOLOGY");
+            t.connect("smartgreena@gmail.com", "gysobgxsiclhqpvh");
             t.sendMessage(correo, correo.getAllRecipients());
 
             // Cerramos conexion.
@@ -68,6 +68,20 @@ public class cMail {
             
             this._error = e.getMessage();
         }
+        return envio;
+    }
+    
+    public boolean emailContact(String email, String subject, String message, String name){
+        
+        _para = "smartgreena@gmail.com";      
+        String asunto = "Mensaje de contacto para SmartGreen con el asunto: " + subject;
+        String mensaje = "Contenido."
+                       + "\nNombre:\n" + name
+                       + "\nCorreo:\n" + email
+                       + "\nMensaje:\n " + message;
+        
+        boolean envio = mandaMail(_para, asunto, mensaje);
+        
         return envio;
     }
     
