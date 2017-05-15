@@ -144,7 +144,7 @@
             </div>
             
             <div class="table-responsive">
-                <table class="table table-bordered">
+                <table class="table table-responsive table-bordered">
                     <thead>
                         <tr>
                             <th style="color: white; text-shadow: black 0.1em 0.1em 0.2em;">Imagen</th>

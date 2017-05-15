@@ -178,50 +178,6 @@
             </div>
         </section>
         
-        
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Contáctanos</h2>
-                        <h3 class="section-subheading text-muted">Envia tus dudas o sugerencias</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form action="contact.jsp" method="post" name="sentMessage" id="contactForm" novalidate>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Tu nombre *" id="name" name="name" required data-validation-required-message="Por favor ingresa tu nombre">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Tu correo eléctronico *" id="email" name="email" required data-validation-required-message="Por favor ingresa tu correo">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Asunto *" id="subject" name="subject" required data-validation-required-message="Por favor ingresa tu asunto">
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <textarea class="form-control" placeholder="Tu mensaje **" id="message" name="message" required data-validation-required-message="Por favor ingresa un mensaje"></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                                <div class="col-lg-12 text-center">
-                                    <div id="success"></div>
-                                    <button type="submit" class="btn btn-xl">Enviar Mensaje</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section id="team" class="bg-light-gray">
             <div class="container">
                 <div class="row">
@@ -278,6 +234,49 @@
             </div>
         </section>
         
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Contáctanos</h2>
+                        <h3 class="section-subheading text-muted">Envia tus dudas o sugerencias</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form action="contact.jsp" method="post" name="sentMessage" id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Tu nombre *" id="name" name="name" required data-validation-required-message="Por favor ingresa tu nombre">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Tu correo eléctronico *" id="email" name="email" required data-validation-required-message="Por favor ingresa tu correo">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Asunto *" id="subject" name="subject" required data-validation-required-message="Por favor ingresa tu asunto">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Tu mensaje **" id="message" name="message" required data-validation-required-message="Por favor ingresa un mensaje"></textarea>
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-lg-12 text-center">
+                                    <div id="success"></div>
+                                    <button type="submit" class="btn btn-xl">Enviar Mensaje</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.min.js"></script>

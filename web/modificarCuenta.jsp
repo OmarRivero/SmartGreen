@@ -157,12 +157,14 @@
                     <form name="formModificarCuenta" id="formModificarCuenta" action="/SmartGreen/ModificarDatos" method="post">
                         <div class="row">
                             <div class="col-md-6">
+                                <label class="section-subheading text-muted">Nombre</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Nuevo nombre" name="nombre" required data-validation-required-message="Por favor ingresa tu nombre">
+                                    <input type="text" class="form-control" value="<%=h.getNombre()%>" name="nombre" required data-validation-required-message="Por favor ingresa tu nombre">
                                     <p class="help-block text-danger"></p>
                                 </div>
+                                <label class="section-subheading text-muted">Correo</label>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Nuevo correo eléctronico" name="correo" required data-validation-required-message="Por favor ingresa tu correo.">
+                                    <input type="email" class="form-control" value="<%=h.getCorreo() %>" name="correo" required data-validation-required-message="Por favor ingresa tu correo.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
@@ -170,7 +172,7 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Repite tu nueva contraseña"  name="contrasena2" required data-validation-required-message="Por favor repite tu contraseña.">
+                                    <input type="password" class="form-control" placeholder="Repite tu nueva contraseña" name="contrasena2" required data-validation-required-message="Por favor repite tu contraseña.">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div>                                        

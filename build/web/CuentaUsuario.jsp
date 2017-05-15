@@ -175,8 +175,6 @@
                 </div>
             </div>
             <br>
-            <br>
-            <br>
             <%if(boton == 1){ %>
             <div class="row">
                 <div class="col-lg-12 text-center">
